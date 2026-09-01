@@ -6,6 +6,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   server: {
+    host: true, // escuta em todas as interfaces (necessário em Codespaces/devcontainers)
     port: 5173,
     proxy: {
       '/api': {
